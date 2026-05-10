@@ -1,0 +1,92 @@
+@comment{
+  refs.bib -- BibTeX bibliography
+
+  RULES (read before editing):
+  - Never put percent comments inside entry blocks.
+    BibTeX treats them as field names and throws a parse error.
+  - All comments go in @comment{} blocks or as plain text before the first entry.
+  - Use "article" type for journal articles and preprints (arXiv / bioRxiv).
+  - Use "incollection" for book chapters / edited volumes.
+  - Use "inproceedings" for conference papers.
+  - Use "techreport" for government / agency reports.
+  - Use "misc" for datasets, databases, and software.
+  - Entries flagged VERIFY below need author/title confirmation before submission.
+}
+
+@comment{ ---- Placeholder (remove before submission) ----
+  Used by the template so \cite{placeholder} compiles without errors.
+  Replace every \cite{placeholder} in strategy_body.tex with real citation keys,
+  then delete this entry.
+}
+
+@misc{placeholder,
+  author = {{Replace with Author}},
+  title  = {Replace with Title},
+  year   = {0000},
+  note   = {PLACEHOLDER -- replace this entry before submission}
+}
+
+@comment{ ---- Journal articles ---- }
+
+@article{AuthorYYYYShortKey,
+  author  = {Last, First and Last2, First2},
+  title   = {Full title of the article},
+  journal = {Journal Name},
+  year    = {YYYY},
+  volume  = {XX},
+  number  = {X},
+  pages   = {XXX--XXX},
+  doi     = {10.XXXX/XXXXX}
+}
+
+@comment{ ---- Book chapters / edited volumes ---- }
+
+@incollection{AuthorYYYYChapter,
+  author    = {Last, First},
+  title     = {Chapter title},
+  booktitle = {Book Title},
+  editor    = {EditorLast, EditorFirst},
+  publisher = {Publisher Name},
+  address   = {City, State},
+  year      = {YYYY},
+  pages     = {XXX--XXX}
+}
+
+@comment{ ---- Conference papers ---- }
+
+@inproceedings{AuthorYYYYConference,
+  author    = {Last, First and Last2, First2},
+  title     = {Paper title},
+  booktitle = {Proceedings of the Conference Name},
+  year      = {YYYY},
+  pages     = {XXX--XXX}
+}
+
+@comment{ ---- Preprints (arXiv / bioRxiv) ---- }
+
+@article{AuthorYYYYPreprint,
+  author  = {Last, First and Last2, First2},
+  title   = {Preprint title},
+  journal = {arXiv},
+  year    = {YYYY},
+  note    = {arXiv:XXXX.XXXXX}
+}
+
+@comment{ ---- Government / agency reports ---- }
+
+@techreport{AgencyYYYYReport,
+  author      = {{Agency Name}},
+  title       = {Report title},
+  institution = {Agency Name},
+  year        = {YYYY},
+  note        = {Available at: https://example.gov/report}
+}
+
+@comment{ ---- Datasets / databases ---- }
+
+@misc{DatasetYYYY,
+  author = {{Organization Name}},
+  title  = {Dataset or Database Name},
+  year   = {YYYY},
+  note   = {Accessed YYYY-MM-DD. Available at: https://example.org}
+}

@@ -1,0 +1,57 @@
+% ============================================================
+% nih_preamble.tex — Shared NIH formatting
+% \input{nih_preamble} after \documentclass[11pt]{article}
+%
+% Do not re-import packages already loaded here.
+% Add project-specific macros in the CUSTOMIZE section below.
+% ============================================================
+
+\usepackage[top=0.5in, bottom=0.5in, left=0.5in, right=0.5in]{geometry}
+\usepackage{fontspec}
+\setmainfont{Arial}
+\usepackage{microtype}
+
+\usepackage[normalem]{ulem}   % \uline{} for underlining, \sout{} for strikethrough
+
+\usepackage{parskip}
+\setlength{\parskip}{4pt}
+\setlength{\parindent}{0pt}
+\usepackage{setspace}
+\singlespacing
+
+\usepackage{titlesec}
+\titleformat{\section}[block]{\normalfont\bfseries\normalsize}{}{0pt}{}
+\titleformat{\subsection}[block]{\normalfont\bfseries\normalsize}{}{0pt}{}
+\titleformat{\subsubsection}[runin]{\normalfont\bfseries\normalsize}{}{0pt}{}[\enspace]
+\titlespacing*{\section}{0pt}{8pt}{4pt}
+\titlespacing*{\subsection}{0pt}{6pt}{2pt}
+\titlespacing*{\subsubsection}{0pt}{4pt}{0pt}
+
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{longtable}
+\usepackage{tabularx}
+\usepackage{graphicx}
+\usepackage{pgfgantt}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta, positioning, fit, backgrounds, shapes.geometric}
+
+\usepackage[super,sort&compress]{natbib}
+\bibliographystyle{unsrt}
+
+\usepackage[draft]{hyperref}   % draft suppresses clickable links per NIH guidelines
+\usepackage{xcolor}
+\usepackage{soul}
+\usepackage{enumitem}
+\setlist[itemize]{noitemsep, topsep=2pt}
+\setlist[enumerate]{noitemsep, topsep=2pt}
+
+% \placeholder{text} — renders as red italic [text]; remove all before submission
+\newcommand{\placeholder}[1]{\textcolor{red}{\textit{[#1]}}}
+
+% ============================================================
+%% CUSTOMIZE: add project-specific macros here
+% Examples:
+%   \newcommand{\myabbrev}{\textbf{ABBREV}}
+%   \newcommand{\projectname}{My Project Name}
+% ============================================================

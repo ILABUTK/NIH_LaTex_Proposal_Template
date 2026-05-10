@@ -1,0 +1,46 @@
+% ============================================================
+% proposal_package.tex — NIH R03 Proposal Package  [SINGLE SOURCE]
+%
+% All sections compile together for consistent citation numbering.
+% Individual section PDFs are extracted via: make split
+%
+% Section order and page layout (update Makefile page ranges to match):
+%   p.1     Project Summary/Abstract
+%   p.2     Project Narrative
+%   p.3     Specific Aims
+%   p.4     Multiple PD/PI Leadership Plan  (omit if single-PI)
+%   p.5+    Research Strategy  (6-page limit)
+%   last    Bibliography & References Cited
+%
+% Compile: make all
+% ============================================================
+\documentclass[11pt]{article}
+\input{nih_preamble}
+\pagestyle{empty}
+\begin{document}
+
+% ============================================================
+\input{summary_body}
+\clearpage
+
+% ============================================================
+\input{narrative_body}
+\clearpage
+
+% ============================================================
+\input{aims_body}
+\clearpage
+
+% ============================================================
+% Remove the next two lines for single-PI submissions
+\input{mpi_body}
+\clearpage
+
+% ============================================================
+\input{strategy_body}
+\clearpage
+
+% ============================================================
+\bibliography{refs}
+
+\end{document}
